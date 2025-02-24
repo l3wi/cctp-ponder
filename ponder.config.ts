@@ -36,12 +36,30 @@ export default createConfig({
       abi: tokenMessengerAbi,
       startBlock: "latest",
       network: {
-        mainnet: { address: "0xbd3fa81b58ba92a82136038b25adec7066af3155" },
-        avalanche: { address: "0x6b25532e1060ce10cc3b0a99e5683b91bfde6982" },
-        optimism: { address: "0x2B4069517957735bE00ceE0fadAE88a26365528f" },
-        arbitrum: { address: "0x19330d10D9Cc8751218eaf51E8885D058642E08A" },
-        base: { address: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962" },
-        polygon: { address: "0x9daF8c91AEFAE50b9c0E69629D3F6Ca40cA3B3FE" },
+        mainnet: {
+          address: "0xbd3fa81b58ba92a82136038b25adec7066af3155",
+          startBlock: 16730029,
+        },
+        avalanche: {
+          address: "0x6b25532e1060ce10cc3b0a99e5683b91bfde6982",
+          startBlock: 28446083,
+        },
+        optimism: {
+          address: "0x2B4069517957735bE00ceE0fadAE88a26365528f",
+          startBlock: 108091260,
+        },
+        arbitrum: {
+          address: "0x19330d10D9Cc8751218eaf51E8885D058642E08A",
+          startBlock: 160624870,
+        },
+        base: {
+          address: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962",
+          startBlock: 4746858,
+        },
+        polygon: {
+          address: "0x9daF8c91AEFAE50b9c0E69629D3F6Ca40cA3B3FE",
+          startBlock: 49369589,
+        },
       },
     },
   },
