@@ -2,6 +2,7 @@ import { createConfig } from "ponder";
 import { http } from "viem";
 
 import { weth9Abi } from "./abis/weth9Abi";
+import { tokenMessengerAbi } from "./abis/tokenMessenger";
 
 export default createConfig({
   ordering: "multichain",
@@ -22,16 +23,21 @@ export default createConfig({
       chainId: 137,
       transport: http(process.env.PONDER_RPC_URL_137),
     },
+    arbitrum: {
+      chainId: 42161,
+      transport: http(process.env.PONDER_RPC_URL_42161),
+    },
   },
   contracts: {
-    weth9: {
-      abi: weth9Abi,
+    tokenMessenger: {
+      abi: tokenMessengerAbi,
       startBlock: "latest",
       network: {
-        mainnet: { address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" },
-        base: { address: "0x4200000000000000000000000000000000000006" },
-        optimism: { address: "0x4200000000000000000000000000000000000006" },
-        polygon: { address: "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619" },
+        mainnet: { address: "0xbd3fa81b58ba92a82136038b25adec7066af3155" },
+        optimism: { address: "0x2B4069517957735bE00ceE0fadAE88a26365528f" },
+        arbitrum: { address: "0x19330d10D9Cc8751218eaf51E8885D058642E08A" },
+        base: { address: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962" },
+        polygon: { address: "0x9daF8c91AEFAE50b9c0E69629D3F6Ca40cA3B3FE" },
       },
     },
   },
